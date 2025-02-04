@@ -1,6 +1,7 @@
 package dev.kaoruxun.enderhopper;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.block.AbstractSignBlock;
 import net.minecraft.world.World;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -31,7 +32,7 @@ public class EnderHopper implements ModInitializer {
         for (Direction direction : Direction.values()) {
             BlockPos checkPos = hopperPos.offset(direction);
             Block block = world.getBlockState(checkPos).getBlock();
-            if (block == Blocks.OAK_SIGN || block == Blocks.OAK_WALL_SIGN) {
+            if (block instanceof AbstractSignBlock) {
                 BlockEntity be = world.getBlockEntity(checkPos);
                 if (be instanceof SignBlockEntity sign) {
                     String playerName = getSignPlayerName(sign);

@@ -8,7 +8,7 @@ Allows hoppers to operate ender chests in Minecraft.
 
 ## Usage
 
-Place an **OAK_SIGN** on the hopper above or below the ender chest and write the name of the player who needs to be operated.
+Place **any type of sign** on the hopper above or below the ender chest and write the name of the player who needs to be operated.
 
 - Optional: Modify the **CACHE_EXPIRE_TICKS** constant in `EnderHopperCache.java` to extend the cache lifetime
 
